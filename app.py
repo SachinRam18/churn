@@ -19,11 +19,9 @@ features = [
     "More Offers and Discount"
 ]
 
-@app.route('/')
-def home():
-    return "Welcome to the Food Delivery Churn Prediction API!"
 
-@app.route('/predict', methods=['POST'])
+
+@app.route('/', methods=['POST'])
 def predict():
     try:
         data = request.get_json()
